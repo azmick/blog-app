@@ -15,6 +15,10 @@ export const LoginFailure = () => ({
     type: "LOGIN_FAILURE"
 })
 
+export const Logout = () => ({
+    type: "LOGOUT"
+})
+
 /*Tamam şimdi biz bu durumları oluşturduk fakat bu durumlarda
 oluşturudğumuz objenin proplarını (user,isFetching,error) nasıl
 güncelleyebiliriz ? Reducer ile.  */
