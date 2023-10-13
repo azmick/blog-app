@@ -1,0 +1,52 @@
+.login {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background : linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),
+                url("https://picsum.photos/id/20/3670/2462");
+    background-size: cover;
+}
+
+.loginTitle{
+    font-size: 50px;
+}
+
+.loginForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm > label {
+    margin: 10px 0;
+}
+
+.loginInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+}
+
+.loginButton {
+    margin-top: 20px;
+    cursor:pointer;
+    background-color: #ACD1AF;
+    border: none;
+    color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.loginRegisterButton {
+    position: absolute;
+    top:60px;
+    right: 20px;
+    padding: 10px;
+    background-color: #F47174;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
