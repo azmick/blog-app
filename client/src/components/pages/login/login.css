@@ -32,11 +32,16 @@
 .loginButton {
     margin-top: 20px;
     cursor:pointer;
-    background-color: #ACD1AF;
+    background-color: #96cc9a;
     border: none;
     color:white;
     border-radius: 10px;
     padding: 10px;
+}
+
+.loginButton:disabled{
+    cursor: not-allowed;
+    background-color: #ACD1AF;
 }
 
 .loginRegisterButton {

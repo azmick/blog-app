@@ -10,16 +10,15 @@ function Login() {
 
   const userRef = useRef()
   const passwordRef = useRef()
-  const {dispatch,isFetching,user} = useContext(Context)
+  const {dispatch,isFetching} = useContext(Context)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     dispatch({type:"LOGIN_START"})
     try{
-        const res = axios.post("/auth/login",{
+        const res = await axios.post("/auth/login",{
           username: userRef.current.value,
           password: passwordRef.current.value,
-
         })
     dispatch({type:"LOGIN_SUCCESS",payload:res.data})
     }catch(err){
@@ -27,7 +26,6 @@ function Login() {
     }
   }
 
-  console.log(user)
 
   return (
     <div className="login">
@@ -37,7 +35,7 @@ function Login() {
             <input type="text" className="loginInput" placeholder="Kullanıcı adınızı giriniz..." ref={userRef}/>
             <label>Şifre</label>
             <input type="password" className="loginInput" placeholder="Şifrenizi giriniz..." ref={passwordRef}/>
-            <button className="loginButton" type="submit">Giriş Yap</button>
+            <button className="loginButton" type="submit" disabled={isFetching} >Giriş Yap</button>
         </form>
         <button className="loginRegisterButton">
           <Link className="link" to="/register">Kayıt Ol</Link>
